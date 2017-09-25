@@ -24,7 +24,8 @@ from dor.admin_handle.activity_handle import show_activity_applyments,show_activ
 from dor.admin_handle.book_handle import new_book,show_books_info
 from dor.admin_handle.search_handle import search_stu,show_room_info,sort_stu_info
 from dor.admin_handle.live_in_dor_handle import add_stu_dor_info,distribute_dor
-from dor.admin_handle.set_timequantum import set_timeable
+# 留校时间
+from dor.admin_handle.set_application_staying_time import show_staying_time,set_staying_time
 from dor.student_handle.dor_applyment import change_dor_applyment,cancel_dor_applyment,live_on_vacation_applyment,show_live_on_vacation_applyments,show_cancel_dor_applyments,show_change_dor_applyments
 from dor.student_handle.resource_applyment import show_minitor_applyments,show_key_applyments
 from dor.student_handle.pay_bill import show_bill,pay_bill
@@ -89,5 +90,8 @@ urlpatterns = {
     url(r'^dor/admin_handle/search_handle/show_room_info', show_room_info),
     url(r'^dor/admin_handle/live_in_dor_handle/add_stu_dor_info', add_stu_dor_info),
     url(r'^dor/admin_handle/live_in_dor_handle/distribute_dor', distribute_dor),
-    url(r'^dor/admin_handle/set_timequantum/set_timeable', set_timeable),
+    # 留校时间设置和修改
+
+    url(r'^dor/admin_handle/set_staying_time/show_staying_time', show_staying_time),
+    url(r'^dor/admin_handle/set_staying_time/set_application_staying_time', set_staying_time),
 }
